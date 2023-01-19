@@ -1,0 +1,18 @@
+@use "variables";
+@mixin sp{
+    @media only screen and (max-width:variables.$sp){
+        @content;
+    }
+}
+
+@mixin tablet{
+    @media only screen and (max-width:variables.$tablet){
+        @content;
+    }
+}
+
+@mixin pc{
+    @media only screen and (max-width:variables.$pc){
+        @content;
+    }
+}

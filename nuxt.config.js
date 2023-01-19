@@ -1,12 +1,10 @@
 export default {
-  // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
 
-  // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'flatsum-web',
+    title: '合同会社FlatSum',
     htmlAttrs: {
-      lang: 'en'
+      lang: 'ja'
     },
     meta: [
       { charset: 'utf-8' },
@@ -18,27 +16,29 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
-
-  // Global CSS: https://go.nuxtjs.dev/config-css
-  css: ["@/assets/css/_reset.scss"],
-
-  // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [
-    { src: '~/plugins/swiper', mode: 'client' }
+  
+  css: [
+    "@/assets/css/_variables.scss",
+    "@/assets/css/_reset.scss",
+    "@/assets/css/_common.scss",
+    "@/assets/css/_mixin.scss",
   ],
 
-  // Auto import components: https://go.nuxtjs.dev/config-components
+  plugins: [
+  ],
+
   components: true,
 
-  // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
   ],
 
-  // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
   ],
 
-  // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+  },
+
+  router: {
+    base: process.env.NODE_ENV === "production" ? PRODUCTION_BASE_PATH : "/",
   }
 }

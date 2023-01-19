@@ -4,15 +4,8 @@
   </svg>
 </template>
 
-<style lang="scss">
+<style>
 .nuxt-logo {
   height: 180px;
-}
-body{
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-  &::-webkit-scrollbar{
-    display: none;
-  }
 }
 </style>
